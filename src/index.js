@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3001;
 //use body
+
 app.use(express.json());
+
+
 app.use(express.urlencoded({extended: true}));
 
 const bookRoute = require("./routes/book")
@@ -23,3 +26,5 @@ app.listen(port,()=>{
     console.log(`example app listening on port ${port}`)
 })
 
+// const userRoute = require("./routes/user");
+// app.use('/v1', userRoute);
